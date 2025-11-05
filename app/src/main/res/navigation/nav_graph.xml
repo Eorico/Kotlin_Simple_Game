@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/User">
+
+    <fragment
+        android:id="@+id/User"
+        android:name="com.HoaEight.hoaeight.UserFragment"
+        android:label="User"
+        tools:layout="@layout/fragment_user">
+
+        <action
+            android:id="@+id/action_User_to_Question"
+            app:destination="@id/Question" />
+    </fragment>
+    <fragment
+        android:id="@+id/Question"
+        android:name="com.HoaEight.hoaeight.QuestionFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_question">
+        <action
+            android:id="@+id/action_Question_to_Score"
+            app:destination="@id/Score" />
+    </fragment>
+    <fragment
+        android:id="@+id/Score"
+        android:name="com.HoaEight.hoaeight.ScoreFragment"
+        android:label="Score"
+        tools:layout="@layout/fragment_score">
+
+        <action
+            android:id="@+id/action_Score_to_User"
+            app:destination="@id/User" />
+    </fragment>
+
+</navigation>

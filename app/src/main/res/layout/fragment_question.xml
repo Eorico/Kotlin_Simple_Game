@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/ic_bg"
+    android:fitsSystemWindows="true"
+    tools:context=".QuestionFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="16dp">
+
+        <!-- Question text -->
+        <TextView
+            android:id="@+id/tv_question"
+            android:layout_width="match_parent"
+            android:layout_height="92dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="Sino ang Komedyante na ito?"
+            android:textColor="#181F16"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <!-- Image -->
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="wrap_content"
+            android:layout_height="180dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="Komedyante Image"
+            android:scaleType="fitCenter"
+            tools:src="@drawable/vic" />
+
+        <!-- Timer and Lives Row -->
+
+        <!-- Progress Bar and Counter -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="8dp">
+
+            <!-- Timer on the left -->
+            <TextView
+                android:id="@+id/tv_timer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="⏱️ 60s"
+                android:textColor="#181F16"
+                android:textSize="18sp" />
+
+            <!-- Hearts (Lives) on the right -->
+            <TextView
+                android:id="@+id/tv_lives"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="❤️❤️❤️"
+                android:textColor="#181F16"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="10"
+                android:minHeight="50dp"
+                android:progress="1"
+                android:indeterminate="false" />
+
+            <TextView
+                android:id="@+id/tv_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="1/10"
+                android:textColor="#181F16"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Options -->
+        <TextView
+            android:id="@+id/tv_option_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/default_option_border_bg"
+            android:padding="15dp"
+            android:gravity="center"
+            tools:text="Vic Sotto" />
+
+        <TextView
+            android:id="@+id/tv_option_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/default_option_border_bg"
+            android:padding="15dp"
+            android:gravity="center"
+            tools:text="Joey de Leon" />
+
+        <TextView
+            android:id="@+id/tv_option_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/default_option_border_bg"
+            android:padding="15dp"
+            android:gravity="center"
+            tools:text="Dolphy" />
+
+        <TextView
+            android:id="@+id/tv_option_four"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/default_option_border_bg"
+            android:padding="15dp"
+            android:gravity="center"
+            tools:text="Michael V." />
+
+        <!-- Submit button -->
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#2C4B2F"
+            android:text="SUBMIT"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>
